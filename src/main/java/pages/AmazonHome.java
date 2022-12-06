@@ -22,7 +22,7 @@ public class AmazonHome {
     public AmazonHome(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(this.driver, Duration.ofSeconds(5));
-        actions = new Actions(driver);
+        actions = new Actions(this.driver);
     }
 
     public void searchByText(String searchText) {
@@ -46,8 +46,7 @@ public class AmazonHome {
 
         actions.moveToElement(filterElement);
         filterElement.click();
-        wait.until(
-                ExpectedConditions.visibilityOfElementLocated(filterXpath));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(filterXpath));
         //Check if element is selected after clicking
         WebElement filterTextAfter = driver.findElement(filterXpath);
         checkIfElementTextIsSelected(filterTextAfter);
