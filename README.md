@@ -2,7 +2,7 @@
 
 This project is a test framework built to test search and filter functionality on amazon web app.
 Currently, it has the test scenario given in the problem statement but can be extended to include more scenarios in future.
-The test class is `SearchTest`
+The test class is `SearchTest`.
 Tests can be run on multiple browser which can be passed through config files, for e.g. FIREFOX, EDGE. Default browser is set to CHROME.
 
 # Dependencies
